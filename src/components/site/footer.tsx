@@ -1,4 +1,3 @@
-import type { ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
 import { Mail, Phone } from "lucide-react";
 import { FacebookIcon, InstagramIcon, TikTokIcon, WhatsAppIcon } from "@/components/site/icons";
@@ -24,16 +23,25 @@ export function Footer() {
   };
 
   return (
-    <footer className="relative overflow-hidden border-t border-paper/10 bg-ink">
-      <svg className="pointer-events-none absolute end-0 top-0 h-28 w-1/2 text-orange" viewBox="0 0 100 40" preserveAspectRatio="none" aria-hidden="true">
-        <polygon points="28,0 100,0 100,40 0,40" fill="currentColor" />
-      </svg>
-      <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-2 lg:grid-cols-4">
+    <footer className="relative border-t border-paper/10 bg-ink">
+      <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-2 lg:grid-cols-3">
         <div>
           <img src="/media/logo.png" alt="EL AFIA MOTOS" className="h-20 w-auto" />
           <p className="mt-4 text-sm font-semibold tracking-widest text-orange">{t.footer.tagline}</p>
         </div>
         <div>
+          <h2 className="font-display text-xl text-paper">{t.footer.links}</h2>
+          <ul className="mt-3 space-y-2">
+            {QUICK.map((link) => (
+              <li key={link.hash}>
+                <Link to="/" hash={link.hash} activeOptions={{ exact: true, includeHash: true }} className="text-sm text-muted hover:text-orange">
+                  {labels[link.key]}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="rounded-3xl border border-paper/15 bg-charcoal p-5">
           <h2 className="font-display text-xl text-paper">{t.footer.info}</h2>
           <p className="mt-3 text-sm text-muted">EL AFIA MOTOS</p>
           <p className="text-sm text-muted">
@@ -48,30 +56,11 @@ export function Footer() {
             </a>
           </p>
           <p className="text-sm">
-            <a className="text-paper hover:text-orange" href={WHATSAPP_URL}>
-              WhatsApp
-            </a>
-          </p>
-          <p className="text-sm">
             <a className="text-paper hover:text-orange" href={`mailto:${EMAIL}`} dir="ltr">
               {EMAIL}
             </a>
           </p>
-        </div>
-        <div>
-          <h2 className="font-display text-xl text-paper">{t.footer.links}</h2>
-          <ul className="mt-3 space-y-2">
-            {QUICK.map((link) => (
-              <li key={link.hash}>
-                <Link to="/" hash={link.hash} activeOptions={{ exact: true, includeHash: true }} className="text-sm text-muted hover:text-orange">
-                  {labels[link.key]}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <h2 className="font-display text-xl text-paper">{t.footer.follow}</h2>
+          <h2 className="mt-6 font-display text-xl text-paper">{t.footer.follow}</h2>
           <div className="mt-4 flex flex-wrap gap-2">
             <Social href={SOCIAL.facebook} label="Facebook">
               <FacebookIcon className="size-5" />
