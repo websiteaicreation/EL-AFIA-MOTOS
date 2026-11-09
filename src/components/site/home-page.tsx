@@ -94,7 +94,7 @@ function Hero({ t }: { t: Dictionary }) {
 
 function Trust({ icon, label }: { icon: ReactNode; label: string }) {
   return (
-    <li className="flex items-center gap-3 rounded-2xl border border-paper/20 bg-ink/60 px-3 py-3 backdrop-blur-md">
+      <li className="flex min-w-0 items-center gap-3 rounded-2xl border border-paper/20 bg-ink/60 px-3 py-3 backdrop-blur-md">
       <span className="grid size-10 shrink-0 place-items-center rounded-full bg-orange/15 text-orange">{icon}</span>
       <span className="text-sm font-medium text-paper">{label}</span>
     </li>
@@ -400,7 +400,7 @@ function Location({ t }: { t: Dictionary }) {
           </a>
         </div>
         <div className="overflow-hidden rounded-3xl border border-paper/10 bg-panel">
-          <iframe title={t.location.title} src={MAPS_EMBED} className="h-80 w-full" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
+          <iframe title={t.location.title} src={MAPS_EMBED} className="h-64 w-full sm:h-80 lg:h-[28rem]" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
         </div>
       </div>
     </section>

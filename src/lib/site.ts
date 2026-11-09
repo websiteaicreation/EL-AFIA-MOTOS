@@ -5,9 +5,8 @@ export const EMAIL = "elafiamoto@gmail.com";
 export const ADDRESS = "AV BNI HDIFA NR 21 KOUILMA TETOUAN, MOROCCO";
 export const ADDRESS_LINE = "AV BNI HDIFA NR 21 KOUILMA TETOUAN";
 export const OWNER = "AYOUB EL AFIA";
-export const MAPS_QUERY = "AV BNI HDIFA NR 21 KOUILMA TETOUAN, MOROCCO";
-export const MAPS_LINK = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(MAPS_QUERY)}`;
-export const MAPS_EMBED = `https://maps.google.com/maps?q=${encodeURIComponent(MAPS_QUERY)}&z=16&output=embed`;
+export const MAPS_LINK = "https://share.google/7mUBtzXFnzIClYhin";
+export const MAPS_EMBED = "https://maps.google.com/maps?q=EL+AFIA+MOTOS,+Kouilma,+Tetouan,+Morocco&z=17&output=embed";
 
 export const SOCIAL = {
   facebook: "https://www.facebook.com/elafiamotos",

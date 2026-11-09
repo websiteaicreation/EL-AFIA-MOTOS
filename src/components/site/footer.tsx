@@ -51,7 +51,7 @@ export function Footer() {
           <p className="text-sm text-muted">
             {t.about.owner}: {OWNER}
           </p>
-          <p className="mt-2 text-sm text-paper">{t.about.fullAddress}</p>
+          <p className="mt-2 text-sm text-balance text-paper">{t.about.fullAddress}</p>
           <p className="mt-2 text-sm">
             <a className="text-paper hover:text-orange" href={`tel:${PHONE_TEL}`} dir="ltr">
               {PHONE_DISPLAY}

@@ -11,7 +11,7 @@ export function LangSwitch({ className = "" }: { className?: string }) {
             key={item.id}
             type="button"
             onClick={() => setLang(item.id as Lang)}
-            className={`min-h-11 min-w-11 rounded-full px-2 text-sm font-semibold ${
+            className={`min-h-10 min-w-9 rounded-full px-1.5 text-xs font-semibold sm:min-h-11 sm:min-w-11 sm:px-2 sm:text-sm ${
               active ? "bg-orange text-ink" : "text-paper/80 hover:text-paper"
             }`}
             aria-pressed={active}

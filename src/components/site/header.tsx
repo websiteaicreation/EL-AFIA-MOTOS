@@ -59,10 +59,8 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <div className="ms-auto flex items-center gap-1 sm:gap-2">
-          <div className="hidden md:block">
-            <LangSwitch />
-          </div>
+        <div className="ms-auto flex shrink-0 items-center gap-1">
+          <LangSwitch />
           <div className="hidden sm:block">
             <a href={whatsappWith(t.wa.quick)} className="btn btn-wa h-10 min-h-10 px-4 text-sm">
               {t.nav.book}
