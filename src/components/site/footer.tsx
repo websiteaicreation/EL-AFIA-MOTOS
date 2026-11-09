@@ -23,12 +23,16 @@ export function Footer() {
   };
 
   return (
-    <footer className="relative border-t border-paper/10 bg-ink">
-      <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-2 lg:grid-cols-3">
+    <footer className="relative overflow-hidden border-t border-paper/10 bg-ink">
+      <svg className="pointer-events-none absolute end-0 top-0 h-28 w-1/2 text-orange" viewBox="0 0 100 40" preserveAspectRatio="none" aria-hidden="true">
+        <polygon points="28,0 100,0 100,40 0,40" fill="currentColor" />
+      </svg>
+      <div className="relative z-10 mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-2">
         <div>
           <img src="/media/logo.png" alt="EL AFIA MOTOS" className="h-20 w-auto" />
           <p className="mt-4 text-sm font-semibold tracking-widest text-orange">{t.footer.tagline}</p>
         </div>
+        <div className="hidden md:block" aria-hidden="true" />
         <div>
           <h2 className="font-display text-xl text-paper">{t.footer.links}</h2>
           <ul className="mt-3 space-y-2">
