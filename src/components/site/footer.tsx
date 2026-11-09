@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
 import { Mail, Phone } from "lucide-react";
-import { FacebookIcon, InstagramIcon, Mark, TikTokIcon, WhatsAppIcon } from "@/components/site/icons";
+import { FacebookIcon, InstagramIcon, TikTokIcon, WhatsAppIcon } from "@/components/site/icons";
 import { useI18n } from "@/lib/i18n";
 import { ADDRESS, EMAIL, OWNER, PHONE_DISPLAY, PHONE_TEL, SOCIAL, WHATSAPP_URL } from "@/lib/site";
 
@@ -30,14 +30,7 @@ export function Footer() {
       </svg>
       <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="inline-flex items-center gap-2">
-            <span className="grid size-10 place-items-center rounded-full bg-orange text-ink">
-              <Mark className="size-7" />
-            </span>
-            <span className="font-display text-2xl tracking-wide text-paper">
-              EL AFIA <span className="text-orange">MOTOS</span>
-            </span>
-          </div>
+          <img src="/media/logo.jpg" alt="EL AFIA MOTOS" className="h-20 w-auto" />
           <p className="mt-4 text-sm font-semibold tracking-widest text-orange">{t.footer.tagline}</p>
         </div>
         <div>

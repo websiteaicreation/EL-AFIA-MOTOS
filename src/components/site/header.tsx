@@ -44,7 +44,7 @@ export function Header() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-paper/10 bg-ink/90 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center gap-3 px-4">
+      <div className="mx-auto flex h-20 max-w-6xl items-center gap-3 px-4">
         <Logo />
         <nav className="ms-6 hidden items-center gap-5 lg:flex" aria-label="Main">
           {LINKS.map((link) => (
@@ -80,7 +80,7 @@ export function Header() {
         </div>
       </div>
       {open ? (
-        <nav className="fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto bg-ink px-4 py-4 lg:hidden" aria-label="Mobile">
+        <nav className="fixed inset-x-0 top-20 bottom-0 z-40 overflow-y-auto bg-ink px-4 py-4 lg:hidden" aria-label="Mobile">
           {LINKS.map((link) => (
             <Link
               key={link.hash}
