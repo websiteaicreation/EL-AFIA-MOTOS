@@ -1,0 +1,8 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # Public rental site. Auth stays off unless a real provider is configured.
+  VITE_AUTH_ENABLED = "false"
