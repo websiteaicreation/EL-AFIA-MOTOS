@@ -455,23 +455,6 @@ function Contact({ t }: { t: Dictionary }) {
           <p className="text-sm font-semibold tracking-widest text-orange">{t.contact.kicker}</p>
           <h2 className="mt-2 font-display text-4xl text-paper sm:text-5xl">{t.contact.title}</h2>
           <p className="mt-3 max-w-md text-paper/80">{t.contact.sub}</p>
-          <ul className="mt-6 space-y-3 text-sm">
-            <li>EL AFIA MOTOS</li>
-            <li>
-              {t.about.owner}: {OWNER}
-            </li>
-            <li dir="ltr">{ADDRESS}</li>
-            <li>
-              <a className="hover:text-orange" href={`tel:${PHONE_TEL}`} dir="ltr">
-                {PHONE_DISPLAY}
-              </a>
-            </li>
-            <li>
-              <a className="hover:text-orange" href={`mailto:${EMAIL}`} dir="ltr">
-                {EMAIL}
-              </a>
-            </li>
-          </ul>
         </div>
         <form onSubmit={submit} className="space-y-3 rounded-3xl bg-paper p-5 text-ink" noValidate>
           <label className="block text-sm font-medium">
