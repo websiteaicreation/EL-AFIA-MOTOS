@@ -100,7 +100,7 @@ function Trust({ icon, label }: { icon: ReactNode; label: string }) {
   );
 }
 
-function Fleet({ t, lang }: { t: Dictionary; lang: "fr" | "en" | "ar" }) {
+export function Fleet({ t, lang }: { t: Dictionary; lang: "fr" | "en" | "ar" }) {
   return (
     <section id="motos" className="scroll-mt-20 bg-ink px-4 py-20">
       <div className="mx-auto max-w-6xl">
@@ -159,7 +159,7 @@ function PriceLine({ amount, period, lang }: { amount: number; period: string; l
   );
 }
 
-function About({ t }: { t: Dictionary }) {
+export function About({ t }: { t: Dictionary }) {
   const points = [
     { icon: <ShieldCheck className="size-5" />, label: t.about.points.pro },
     { icon: <Bike className="size-5" />, label: t.about.points.range },
@@ -406,7 +406,7 @@ function Location({ t }: { t: Dictionary }) {
   );
 }
 
-function Contact({ t }: { t: Dictionary }) {
+export function Contact({ t }: { t: Dictionary }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");

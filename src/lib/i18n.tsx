@@ -13,8 +13,10 @@ const fr = {
   a11y: { skip: "Aller au contenu", menu: "Ouvrir le menu", close: "Fermer le menu" },
   nav: {
     home: "Accueil",
+    menu: "Menu",
     motos: "Nos motos",
     about: "À propos",
+    catalogue: "Catalogue",
     services: "Services",
     reviews: "Avis",
     contact: "Contact",
@@ -217,11 +219,13 @@ const en: typeof fr = {
   a11y: { skip: "Skip to content", menu: "Open menu", close: "Close menu" },
   nav: {
     home: "Home",
+    menu: "Menu",
     motos: "Our motorcycles",
-    about: "About",
+    about: "About us",
+    catalogue: "Catalogue",
     services: "Services",
     reviews: "Reviews",
-    contact: "Contact",
+    contact: "Contact us",
     book: "Book",
   },
   hero: {
@@ -421,8 +425,10 @@ const ar: typeof fr = {
   a11y: { skip: "الانتقال إلى المحتوى", menu: "فتح القائمة", close: "إغلاق القائمة" },
   nav: {
     home: "الرئيسية",
+    menu: "القائمة",
     motos: "دراجاتنا",
     about: "من نحن",
+    catalogue: "الكتالوج",
     services: "الخدمات",
     reviews: "الآراء",
     contact: "اتصل بنا",

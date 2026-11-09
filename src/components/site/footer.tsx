@@ -6,18 +6,18 @@ import { useI18n } from "@/lib/i18n";
 import { EMAIL, OWNER, PHONE_DISPLAY, PHONE_TEL, SOCIAL, WHATSAPP_URL } from "@/lib/site";
 
 const QUICK = [
-  { key: "home", hash: "accueil" },
-  { key: "motos", hash: "motos" },
-  { key: "about", hash: "apropos" },
-  { key: "services", hash: "services" },
-  { key: "contact", hash: "contact" },
+  { key: "home", to: "/", hash: "accueil" },
+  { key: "catalogue", to: "/catalogue", hash: undefined },
+  { key: "about", to: "/about", hash: undefined },
+  { key: "services", to: "/", hash: "services" },
+  { key: "contact", to: "/contact", hash: undefined },
 ] as const;
 
 export function Footer() {
   const { t } = useI18n();
   const labels = {
     home: t.nav.home,
-    motos: t.nav.motos,
+    catalogue: t.nav.catalogue,
     about: t.nav.about,
     services: t.nav.services,
     contact: t.nav.contact,
@@ -37,8 +37,8 @@ export function Footer() {
           <h2 className="font-display text-xl text-paper">{t.footer.links}</h2>
           <ul className="mt-3 space-y-2">
             {QUICK.map((link) => (
-              <li key={link.hash}>
-                <Link to="/" hash={link.hash} activeOptions={{ exact: true, includeHash: true }} className="text-sm text-muted hover:text-orange">
+              <li key={link.key}>
+                <Link to={link.to} hash={link.hash} className="text-sm text-muted hover:text-orange">
                   {labels[link.key]}
                 </Link>
               </li>
