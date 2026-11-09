@@ -17,8 +17,6 @@ import { WhatsAppIcon } from "@/components/site/icons";
 import { BIKES, pricesFor, type BikeSlug } from "@/lib/fleet";
 import { useI18n, type Dictionary } from "@/lib/i18n";
 import {
-  ADDRESS,
-  ADDRESS_LINE,
   EMAIL,
   MAPS_EMBED,
   MAPS_LINK,
@@ -180,10 +178,7 @@ function About({ t }: { t: Dictionary }) {
             <p className="text-sm text-muted">{t.about.owner}</p>
             <p className="font-display text-2xl tracking-wide text-paper">{OWNER}</p>
             <p className="mt-4 text-sm text-muted">{t.about.address}</p>
-            <p className="text-paper" dir="ltr">
-              {ADDRESS_LINE}
-            </p>
-            <p className="text-sm text-muted">{t.about.city}</p>
+            <p className="text-paper">{t.about.fullAddress}</p>
           </div>
           <ul className="mt-5 grid grid-cols-3 gap-3">
             {points.map((point) => (
@@ -379,7 +374,7 @@ function Location({ t }: { t: Dictionary }) {
           <ul className="mt-6 space-y-4">
             <li className="flex items-start gap-3">
               <MapPin className="mt-0.5 size-5 shrink-0 text-orange" />
-              <span dir="ltr">{ADDRESS}</span>
+              <span>{t.about.fullAddress}</span>
             </li>
             <li className="flex items-center gap-3">
               <Phone className="size-5 text-orange" />

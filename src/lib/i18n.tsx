@@ -64,6 +64,7 @@ const fr = {
     p2: "La mission de l'agence est simple : rendre la location accessible, pour explorer la ville ou organiser un déplacement local, avec une réservation par téléphone ou WhatsApp.",
     owner: "Propriétaire",
     address: "Adresse",
+    fullAddress: "AV BNI HDIFA NR 21 KOUILMA TETOUAN, MOROCCO",
     city: "Tétouan, Maroc",
     points: {
       pro: "Service professionnel",
@@ -267,6 +268,7 @@ const en: typeof fr = {
     p2: "The mission is straightforward: make renting accessible, whether you are exploring the city or arranging local transport, with booking by phone or WhatsApp.",
     owner: "Owner",
     address: "Address",
+    fullAddress: "AV BNI HDIFA NR 21 KOUILMA TETOUAN, MOROCCO",
     city: "Tetouan, Morocco",
     points: {
       pro: "Professional service",
@@ -470,6 +472,7 @@ const ar: typeof fr = {
     p2: "هدف الوكالة واضح: جعل الكراء سهلًا وفي المتناول، سواء لاستكشاف المدينة أو لتنقل محلي، مع الحجز عبر الهاتف أو واتساب.",
     owner: "المالك",
     address: "العنوان",
+    fullAddress: "شارع بني حديفة رقم 21 كويلما تطوان، المغرب",
     city: "تطوان، المغرب",
     points: {
       pro: "خدمة مهنية",

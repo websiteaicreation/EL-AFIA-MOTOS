@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Mail, Phone } from "lucide-react";
 import { FacebookIcon, InstagramIcon, TikTokIcon, WhatsAppIcon } from "@/components/site/icons";
 import { useI18n } from "@/lib/i18n";
-import { ADDRESS, EMAIL, OWNER, PHONE_DISPLAY, PHONE_TEL, SOCIAL, WHATSAPP_URL } from "@/lib/site";
+import { EMAIL, OWNER, PHONE_DISPLAY, PHONE_TEL, SOCIAL, WHATSAPP_URL } from "@/lib/site";
 
 const QUICK = [
   { key: "home", hash: "accueil" },
@@ -51,9 +51,7 @@ export function Footer() {
           <p className="text-sm text-muted">
             {t.about.owner}: {OWNER}
           </p>
-          <p className="mt-2 text-sm text-paper" dir="ltr">
-            {ADDRESS}
-          </p>
+          <p className="mt-2 text-sm text-paper">{t.about.fullAddress}</p>
           <p className="mt-2 text-sm">
             <a className="text-paper hover:text-orange" href={`tel:${PHONE_TEL}`} dir="ltr">
               {PHONE_DISPLAY}

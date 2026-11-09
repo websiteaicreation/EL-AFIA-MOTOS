@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { Shell } from "@/components/site/shell";
 import { useI18n } from "@/lib/i18n";
-import { ADDRESS, EMAIL, OWNER, PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
+import { EMAIL, OWNER, PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
 
 export const Route = createFileRoute("/mentions")({
   component: MentionsPage,
@@ -24,7 +24,7 @@ function MentionsPage() {
         <p>
           {t.about.owner}: {OWNER}
         </p>
-        <p dir="ltr">{ADDRESS}</p>
+        <p>{t.about.fullAddress}</p>
         <p>
           <a className="hover:text-orange" href={`tel:${PHONE_TEL}`} dir="ltr">
             {PHONE_DISPLAY}
