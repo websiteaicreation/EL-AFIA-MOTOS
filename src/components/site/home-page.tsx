@@ -57,38 +57,40 @@ export function HomePage({ initialMoto }: { initialMoto?: BikeSlug }) {
 
 function Hero({ t }: { t: Dictionary }) {
   return (
-    <section id="accueil" className="relative isolate flex min-h-svh items-end overflow-hidden">
-      <img
-        src="/media/hero.jpg"
-        alt={t.hero.alt}
-        width={1792}
-        height={1008}
-        className="absolute inset-0 h-full w-full object-cover"
-        fetchPriority="high"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/75 to-ink/25 md:bg-gradient-to-r md:from-ink/90 md:via-ink/55 md:to-ink/15" />
-      <div className="relative z-10 mx-auto w-full max-w-6xl px-4 pt-28 pb-10">
-        <p className="font-display text-5xl leading-none tracking-wide text-paper sm:text-7xl">EL AFIA</p>
-        <p className="font-display text-5xl leading-none tracking-wide text-orange sm:text-7xl">MOTOS</p>
-        <p className="mt-4 max-w-xl text-xl font-medium text-paper sm:text-2xl">{t.hero.tagline}</p>
-        <p className="mt-3 max-w-xl text-base text-paper/85">{t.hero.lead}</p>
-        <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-          <a href="#motos" className="btn btn-orange">
-            {t.hero.discover}
-          </a>
-          <a href="#reserver" className="btn btn-ghost">
-            <WhatsAppIcon className="size-5" />
-            {t.hero.book}
-          </a>
+    <>
+      <section id="accueil" className="relative isolate flex h-[50svh] items-end overflow-hidden">
+        <img
+          src="/media/hero.jpg"
+          alt={t.hero.alt}
+          width={1672}
+          height={941}
+          className="absolute inset-0 h-full w-full object-cover object-[center_62%]"
+          fetchPriority="high"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-ink/15 md:bg-gradient-to-r md:from-ink/85 md:via-ink/40 md:to-transparent" />
+        <div className="relative z-10 mx-auto w-full max-w-6xl px-4 pt-20 pb-4">
+          <p className="font-display text-4xl leading-none tracking-wide text-paper sm:text-6xl">EL AFIA</p>
+          <p className="font-display text-4xl leading-none tracking-wide text-orange sm:text-6xl">MOTOS</p>
+          <p className="mt-2 max-w-xl text-base font-medium text-paper sm:text-xl">{t.hero.tagline}</p>
+          <p className="mt-1 hidden max-w-xl text-sm text-paper/85 sm:block">{t.hero.lead}</p>
+          <div className="mt-4 flex flex-col gap-2 sm:flex-row">
+            <a href="#motos" className="btn btn-orange">
+              {t.hero.discover}
+            </a>
+            <a href="#reserver" className="btn btn-ghost">
+              <WhatsAppIcon className="size-5" />
+              {t.hero.book}
+            </a>
+          </div>
         </div>
-        <ul className="mt-8 grid grid-cols-2 gap-3 lg:grid-cols-4">
-          <Trust icon={<ShieldCheck className="size-5" />} label={t.trust.pro} />
-          <Trust icon={<BadgeDollarSign className="size-5" />} label={t.trust.price} />
-          <Trust icon={<MessageCircle className="size-5" />} label={t.trust.easy} />
-          <Trust icon={<MapPin className="size-5" />} label={t.trust.city} />
-        </ul>
-      </div>
-    </section>
+      </section>
+      <ul className="mx-auto grid max-w-6xl grid-cols-2 gap-3 bg-ink px-4 py-4 lg:grid-cols-4">
+        <Trust icon={<ShieldCheck className="size-5" />} label={t.trust.pro} />
+        <Trust icon={<BadgeDollarSign className="size-5" />} label={t.trust.price} />
+        <Trust icon={<MessageCircle className="size-5" />} label={t.trust.easy} />
+        <Trust icon={<MapPin className="size-5" />} label={t.trust.city} />
+      </ul>
+    </>
   );
 }
 
