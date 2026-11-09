@@ -7,7 +7,7 @@ export function WhatsAppFloat() {
   return (
     <a
       href={WHATSAPP_URL}
-      className="wa-pulse fixed bottom-24 end-4 z-40 grid size-14 place-items-center rounded-full bg-wa text-wa-ink shadow-lg"
+      className="wa-pulse fixed bottom-5 end-4 z-40 grid size-14 place-items-center rounded-full bg-wa text-wa-ink shadow-lg"
       aria-label={t.nav.book}
       target="_blank"
       rel="noopener noreferrer"

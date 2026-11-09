@@ -11,7 +11,6 @@ const LINKS = [
   { key: "motos", hash: "motos" },
   { key: "about", hash: "apropos" },
   { key: "services", hash: "services" },
-  { key: "reviews", hash: "avis" },
   { key: "contact", hash: "contact" },
 ] as const;
 
@@ -23,7 +22,6 @@ export function Header() {
     motos: t.nav.motos,
     about: t.nav.about,
     services: t.nav.services,
-    reviews: t.nav.reviews,
     contact: t.nav.contact,
   };
 

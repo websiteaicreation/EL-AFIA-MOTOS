@@ -52,6 +52,13 @@ html[lang="ar"] {
     max-width: 100%;
   }
 
+  #netlify-site-badge,
+  iframe[title="Netlify Drawer"],
+  [data-netlify-badge],
+  a[href*="netlify.com"][class*="badge"] {
+    display: none !important;
+  }
+
   h1,
   h2,
   h3 {

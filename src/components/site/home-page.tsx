@@ -47,7 +47,6 @@ export function HomePage({ initialMoto }: { initialMoto?: BikeSlug }) {
       <Services t={t} />
       <Booking t={t} lang={lang} initialMoto={initialMoto} />
       <Location t={t} />
-      <Reviews t={t} />
       <Contact t={t} />
     </Shell>
   );
@@ -56,17 +55,17 @@ export function HomePage({ initialMoto }: { initialMoto?: BikeSlug }) {
 function Hero({ t }: { t: Dictionary }) {
   return (
     <>
-      <section id="accueil" className="relative isolate flex h-[50svh] items-center justify-center overflow-hidden">
+      <section id="accueil" className="relative isolate flex h-[50svh] min-h-[22rem] items-end justify-center overflow-hidden sm:min-h-[26rem]">
         <img
           src="/media/hero.jpg"
           alt={t.hero.alt}
           width={1672}
           height={941}
-          className="absolute inset-0 h-full w-full object-cover object-[center_62%]"
+          className="absolute inset-0 h-full w-full object-cover object-[center_58%]"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-ink/30" />
-        <div className="relative z-10 mx-auto w-full max-w-3xl px-4 py-5 text-center">
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/25 to-transparent" />
+        <div className="relative z-10 mx-auto w-full max-w-3xl px-4 pt-24 pb-6 text-center">
           <p className="font-display text-3xl leading-none tracking-wide text-paper sm:text-6xl">EL AFIA</p>
           <p className="font-display text-3xl leading-none tracking-wide text-orange sm:text-6xl">MOTOS</p>
           <p className="mx-auto mt-2 max-w-xl text-sm font-medium text-paper sm:text-xl">{t.hero.tagline}</p>
@@ -125,7 +124,7 @@ function Fleet({ t, lang }: { t: Dictionary; lang: "fr" | "en" | "ar" }) {
                 <div className="px-5 pb-5">
                   <h3 className="font-display text-3xl tracking-wide">{bike.name}</h3>
                   <p className="mt-1 text-sm text-ink/70">{blurb}</p>
-                  <ul className="mt-4 space-y-1 text-sm">
+                  <ul className="mt-4 grid grid-cols-3 gap-2">
                     <PriceLine amount={prices.daily} period={t.period.day} lang={lang} />
                     <PriceLine amount={prices.weekly} period={t.period.week} lang={lang} />
                     <PriceLine amount={prices.monthly} period={t.period.month} lang={lang} />
@@ -151,11 +150,11 @@ function Fleet({ t, lang }: { t: Dictionary; lang: "fr" | "en" | "ar" }) {
 
 function PriceLine({ amount, period, lang }: { amount: number; period: string; lang: "fr" | "en" | "ar" }) {
   return (
-    <li>
-      <span className="font-semibold tabular-nums" dir="ltr">
+    <li className="rounded-2xl bg-mist px-1 py-3 text-center">
+      <p className="font-display text-base leading-none text-ink sm:text-xl" dir="ltr">
         {formatMoney(amount, lang)}
-      </span>
-      <span className="text-ink/60"> / {period}</span>
+      </p>
+      <p className="mt-1 text-[0.7rem] text-ink/60 sm:text-xs">{period}</p>
     </li>
   );
 }
@@ -402,22 +401,6 @@ function Location({ t }: { t: Dictionary }) {
         <div className="overflow-hidden rounded-3xl border border-paper/10 bg-panel">
           <iframe title={t.location.title} src={MAPS_EMBED} className="h-64 w-full sm:h-80 lg:h-[28rem]" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
         </div>
-      </div>
-    </section>
-  );
-}
-
-function Reviews({ t }: { t: Dictionary }) {
-  return (
-    <section id="avis" className="scroll-mt-20 bg-charcoal px-4 py-20">
-      <div className="mx-auto max-w-3xl rounded-3xl border border-paper/10 bg-ink px-6 py-12 text-center">
-        <p className="text-sm font-semibold tracking-widest text-orange">{t.reviews.kicker}</p>
-        <h2 className="mt-2 font-display text-4xl text-paper sm:text-5xl">{t.reviews.title}</h2>
-        <p className="mt-3 text-paper/70">{t.reviews.sub}</p>
-        <p className="mt-4 text-paper/85">{t.reviews.body}</p>
-        <a href={whatsappWith(t.wa.review)} className="btn btn-orange mt-6">
-          {t.reviews.cta}
-        </a>
       </div>
     </section>
   );
