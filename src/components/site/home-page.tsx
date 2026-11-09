@@ -58,7 +58,7 @@ export function HomePage({ initialMoto }: { initialMoto?: BikeSlug }) {
 function Hero({ t }: { t: Dictionary }) {
   return (
     <>
-      <section id="accueil" className="relative isolate flex h-[50svh] items-end overflow-hidden">
+      <section id="accueil" className="relative isolate flex h-[50svh] items-center justify-center overflow-hidden">
         <img
           src="/media/hero.jpg"
           alt={t.hero.alt}
@@ -67,13 +67,13 @@ function Hero({ t }: { t: Dictionary }) {
           className="absolute inset-0 h-full w-full object-cover object-[center_62%]"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/55 to-ink/15 md:bg-gradient-to-r md:from-ink/85 md:via-ink/40 md:to-transparent" />
-        <div className="relative z-10 mx-auto w-full max-w-6xl px-4 pt-20 pb-4">
+        <div className="absolute inset-0 bg-ink/45" />
+        <div className="relative z-10 mx-auto w-full max-w-3xl px-4 py-6 text-center">
           <p className="font-display text-4xl leading-none tracking-wide text-paper sm:text-6xl">EL AFIA</p>
           <p className="font-display text-4xl leading-none tracking-wide text-orange sm:text-6xl">MOTOS</p>
-          <p className="mt-2 max-w-xl text-base font-medium text-paper sm:text-xl">{t.hero.tagline}</p>
-          <p className="mt-1 hidden max-w-xl text-sm text-paper/85 sm:block">{t.hero.lead}</p>
-          <div className="mt-4 flex flex-col gap-2 sm:flex-row">
+          <p className="mx-auto mt-2 max-w-xl text-base font-medium text-paper sm:text-xl">{t.hero.tagline}</p>
+          <p className="mx-auto mt-1 hidden max-w-xl text-sm text-paper/85 sm:block">{t.hero.lead}</p>
+          <div className="mt-4 flex flex-col items-center justify-center gap-2 sm:flex-row">
             <a href="#motos" className="btn btn-orange">
               {t.hero.discover}
             </a>
