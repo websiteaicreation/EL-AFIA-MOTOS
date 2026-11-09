@@ -30,7 +30,7 @@ export function Footer() {
       </svg>
       <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <img src="/media/logo.jpg" alt="EL AFIA MOTOS" className="h-20 w-auto" />
+          <img src="/media/logo.png" alt="EL AFIA MOTOS" className="h-20 w-auto" />
           <p className="mt-4 text-sm font-semibold tracking-widest text-orange">{t.footer.tagline}</p>
         </div>
         <div>
