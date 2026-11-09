@@ -45,16 +45,22 @@ export function WhatsAppIcon({ className }: Props) {
 
 export function Mark({ className }: Props) {
   return (
-    <svg viewBox="0 0 64 40" className={className} fill="none" aria-hidden="true">
-      <circle cx="14" cy="28" r="8" stroke="currentColor" strokeWidth="3" />
-      <circle cx="50" cy="28" r="8" stroke="currentColor" strokeWidth="3" />
+    <svg viewBox="0 0 88 36" className={className} aria-hidden="true">
       <path
-        d="M14 28h8l5-12h8l4 7h7M27 16l-4-6h9"
-        stroke="currentColor"
-        strokeWidth="3"
-        strokeLinejoin="round"
-        strokeLinecap="round"
+        fill="currentColor"
+        fillRule="evenodd"
+        d="M8.5 25.2a7.2 7.2 0 1 0 14.4 0 7.2 7.2 0 0 0-14.4 0Zm2.5 0a4.7 4.7 0 1 1 9.4 0 4.7 4.7 0 0 1-9.4 0ZM63.2 25.2a7.2 7.2 0 1 0 14.4 0 7.2 7.2 0 0 0-14.4 0Zm2.5 0a4.7 4.7 0 1 1 9.4 0 4.7 4.7 0 0 1-9.4 0Z"
       />
+      <path
+        fill="currentColor"
+        d="M22.4 23.8h8.2l2.2-5.2h5.1c1.3 0 2.5.6 3.3 1.6l2.1 2.7h6.6l3.6-4.4c.7-.9 1.8-1.4 2.9-1.4h3.4v2.2h-2.8c-.4 0-.7.2-1 .5l-2.6 3.1H42.7l-1.6-2.1h-4.4l-1.9 4.6H22.4Z"
+      />
+      <path
+        fill="currentColor"
+        d="M31.2 18.2 35.8 13c1.6-1.8 4.1-2.5 6.4-1.7 1.6.5 2.8 1.7 3.4 3.3l.6 1.8h-6.1l-1.8-1.5c-.6-.5-1.5-.5-2.1.1L34 17.4h-2.8Z"
+      />
+      <path d="M0 21.5h7.2" stroke="#FF8500" strokeWidth="2" strokeLinecap="round" />
+      <path d="M0 25.2h4.4" stroke="#FF8500" strokeWidth="1.4" strokeLinecap="round" opacity="0.75" />
     </svg>
   );
 }
