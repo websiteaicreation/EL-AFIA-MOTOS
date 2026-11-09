@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="EL AFIA MOTOS">
+  <rect width="32" height="32" rx="7" fill="#080808"/>
+  <g fill="#FF8500">
+    <path fill-rule="evenodd" d="M4.4 22.2a5 5 0 1 0 10 0 5 5 0 0 0-10 0zm2.35 0a2.65 2.65 0 1 1 5.3 0 2.65 2.65 0 0 1-5.3 0z"/>
+    <path fill-rule="evenodd" d="M18.2 22.2a5 5 0 1 0 10 0 5 5 0 0 0-10 0zm2.35 0a2.65 2.65 0 1 1 5.3 0 2.65 2.65 0 0 1-5.3 0z"/>
+    <path d="M9.4 21.4 14.1 15.6h5.1l4.7 4.2-1.9.7-3.1-2.6H16l-2.6 3.5z"/>
+    <path d="M16.6 15.4 18.7 11.6h4.1l-1.7 3.8z"/>
+  </g>
+  <path d="M19.4 12.2 22.6 8.6l1.5 1.2-2.4 3.2z" fill="#FFFFFF"/>
+</svg>
