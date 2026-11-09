@@ -65,18 +65,18 @@ function Hero({ t }: { t: Dictionary }) {
           className="absolute inset-0 h-full w-full object-cover object-[center_62%]"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 bg-ink/45" />
-        <div className="relative z-10 mx-auto w-full max-w-3xl px-4 py-6 text-center">
-          <p className="font-display text-4xl leading-none tracking-wide text-paper sm:text-6xl">EL AFIA</p>
-          <p className="font-display text-4xl leading-none tracking-wide text-orange sm:text-6xl">MOTOS</p>
-          <p className="mx-auto mt-2 max-w-xl text-base font-medium text-paper sm:text-xl">{t.hero.tagline}</p>
+        <div className="absolute inset-0 bg-ink/30" />
+        <div className="relative z-10 mx-auto w-full max-w-3xl px-4 py-5 text-center">
+          <p className="font-display text-3xl leading-none tracking-wide text-paper sm:text-6xl">EL AFIA</p>
+          <p className="font-display text-3xl leading-none tracking-wide text-orange sm:text-6xl">MOTOS</p>
+          <p className="mx-auto mt-2 max-w-xl text-sm font-medium text-paper sm:text-xl">{t.hero.tagline}</p>
           <p className="mx-auto mt-1 hidden max-w-xl text-sm text-paper/85 sm:block">{t.hero.lead}</p>
-          <div className="mt-4 flex flex-col items-center justify-center gap-2 sm:flex-row">
-            <a href="#motos" className="btn btn-orange">
+          <div className="mt-3 flex flex-wrap items-center justify-center gap-2">
+            <a href="#motos" className="btn btn-orange h-10 min-h-10 px-4 text-sm">
               {t.hero.discover}
             </a>
-            <a href="#reserver" className="btn btn-ghost">
-              <WhatsAppIcon className="size-5" />
+            <a href="#reserver" className="btn btn-ghost h-10 min-h-10 px-4 text-sm">
+              <WhatsAppIcon className="size-4" />
               {t.hero.book}
             </a>
           </div>
