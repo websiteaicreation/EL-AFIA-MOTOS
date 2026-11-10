@@ -43,11 +43,9 @@ export function HomePage({ initialMoto }: { initialMoto?: BikeSlug }) {
     <Shell>
       <Hero t={t} />
       <Fleet t={t} lang={lang} />
-      <About t={t} />
       <Services t={t} />
       <Booking t={t} lang={lang} initialMoto={initialMoto} />
       <Location t={t} />
-      <Contact t={t} />
     </Shell>
   );
 }
