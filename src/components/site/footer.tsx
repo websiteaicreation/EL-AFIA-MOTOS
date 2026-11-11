@@ -28,64 +28,68 @@ export function Footer() {
       <svg className="pointer-events-none absolute end-0 top-0 h-16 w-48 text-orange sm:h-20 sm:w-64" viewBox="0 0 100 40" preserveAspectRatio="none" aria-hidden="true">
         <polygon points="28,0 100,0 100,40 0,40" fill="currentColor" />
       </svg>
-      <div className="relative z-10 mx-auto grid max-w-6xl items-start gap-10 px-4 py-14 md:grid-cols-2 lg:grid-cols-3">
-        <div>
-          <Logo />
-          <p className="mt-4 text-sm font-semibold tracking-widest text-orange">{t.footer.tagline}</p>
-        </div>
-        <div>
-          <h2 className="font-display text-xl text-paper">{t.footer.links}</h2>
-          <ul className="mt-3 space-y-2">
-            {QUICK.map((link) => (
-              <li key={link.key}>
-                <Link to={link.to} hash={link.hash} className="text-sm text-muted hover:text-orange">
-                  {labels[link.key]}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="rounded-3xl border border-paper/15 bg-charcoal p-5 md:col-span-2 lg:col-span-1 lg:mt-10">
-          <h2 className="font-display text-xl text-paper">{t.footer.info}</h2>
-          <p className="mt-3 text-sm text-muted">EL AFIA MOTOS</p>
-          <p className="text-sm text-muted">
-            {t.about.owner}: {OWNER}
-          </p>
-          <p className="mt-2 text-sm text-balance text-paper">{t.about.fullAddress}</p>
-          <p className="mt-2 text-sm">
-            <a className="text-paper hover:text-orange" href={`tel:${PHONE_TEL}`} dir="ltr">
-              {PHONE_DISPLAY}
-            </a>
-          </p>
-          <p className="text-sm">
-            <a className="text-paper hover:text-orange" href={`mailto:${EMAIL}`} dir="ltr">
-              {EMAIL}
-            </a>
-          </p>
-          <h2 className="mt-6 font-display text-xl text-paper">{t.footer.follow}</h2>
-          <div className="mt-4 flex flex-wrap gap-2">
-            <Social href={SOCIAL.facebook} label="Facebook">
-              <FacebookIcon className="size-5" />
-            </Social>
-            <Social href={SOCIAL.instagram} label="Instagram">
-              <InstagramIcon className="size-5" />
-            </Social>
-            <Social href={SOCIAL.tiktok} label="TikTok">
-              <TikTokIcon className="size-5" />
-            </Social>
-            <Social href={WHATSAPP_URL} label="WhatsApp">
-              <WhatsAppIcon className="size-5" />
-            </Social>
-            <Social href={`tel:${PHONE_TEL}`} label={t.location.phone}>
-              <Phone className="size-5" />
-            </Social>
-            <Social href={`mailto:${EMAIL}`} label="Gmail">
-              <Mail className="size-5" />
-            </Social>
+      <div className="relative z-10 mx-auto max-w-6xl px-4 py-14">
+        <Logo />
+        <p className="mt-4 text-xs font-semibold tracking-[0.28em] text-orange">{t.footer.tagline}</p>
+        <div className="mt-10 rounded-3xl border border-paper/10 bg-charcoal p-6 sm:p-8">
+          <div className="grid gap-8 sm:grid-cols-2">
+            <div>
+              <h2 className="text-xs font-semibold tracking-[0.22em] text-orange uppercase">{t.footer.info}</h2>
+              <p className="mt-4 font-display text-2xl tracking-wide text-paper">EL AFIA MOTOS</p>
+              <p className="mt-2 text-sm text-muted">
+                {t.about.owner}: {OWNER}
+              </p>
+              <p className="mt-4 text-sm leading-relaxed text-balance text-paper">{t.about.fullAddress}</p>
+              <p className="mt-3 text-sm">
+                <a className="text-paper transition-colors hover:text-orange" href={`tel:${PHONE_TEL}`} dir="ltr">
+                  {PHONE_DISPLAY}
+                </a>
+              </p>
+              <p className="text-sm">
+                <a className="text-paper transition-colors hover:text-orange" href={`mailto:${EMAIL}`} dir="ltr">
+                  {EMAIL}
+                </a>
+              </p>
+            </div>
+            <div>
+              <h2 className="text-xs font-semibold tracking-[0.22em] text-orange uppercase">{t.footer.links}</h2>
+              <ul className="mt-4 space-y-1">
+                {QUICK.map((link) => (
+                  <li key={link.key}>
+                    <Link to={link.to} hash={link.hash} className="inline-flex min-h-10 items-center text-sm tracking-wide text-paper/80 transition-colors hover:text-orange">
+                      {labels[link.key]}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+          <div className="mt-8 border-t border-paper/10 pt-6">
+            <h2 className="text-xs font-semibold tracking-[0.22em] text-orange uppercase">{t.footer.follow}</h2>
+            <div className="mt-4 flex flex-wrap gap-2">
+              <Social href={SOCIAL.facebook} label="Facebook">
+                <FacebookIcon className="size-4" />
+              </Social>
+              <Social href={SOCIAL.instagram} label="Instagram">
+                <InstagramIcon className="size-4" />
+              </Social>
+              <Social href={SOCIAL.tiktok} label="TikTok">
+                <TikTokIcon className="size-4" />
+              </Social>
+              <Social href={WHATSAPP_URL} label="WhatsApp">
+                <WhatsAppIcon className="size-4" />
+              </Social>
+              <Social href={`tel:${PHONE_TEL}`} label={t.location.phone}>
+                <Phone className="size-4" />
+              </Social>
+              <Social href={`mailto:${EMAIL}`} label="Gmail">
+                <Mail className="size-4" />
+              </Social>
+            </div>
           </div>
         </div>
       </div>
-      <div className="relative mx-auto flex max-w-6xl flex-col gap-3 border-t border-paper/10 px-4 pt-5 pb-24 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
+      <div className="relative mx-auto flex max-w-6xl flex-col gap-3 border-t border-paper/10 px-4 pt-5 pb-24 text-xs tracking-wide text-muted sm:flex-row sm:items-center sm:justify-between">
         <p>{t.footer.rights}</p>
         <p className="flex gap-4">
           <Link to="/mentions" className="hover:text-orange">
@@ -106,7 +110,7 @@ function Social({ href, label, children }: { href: string; label: string; childr
     <a
       href={href}
       aria-label={label}
-      className="grid size-11 place-items-center rounded-full border border-paper/20 text-paper transition-colors hover:border-orange hover:text-orange"
+      className="grid size-10 place-items-center rounded-full border border-paper/15 text-paper transition-colors hover:border-orange hover:text-orange"
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
     >
       {children}
