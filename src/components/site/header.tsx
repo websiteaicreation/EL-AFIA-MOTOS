@@ -4,7 +4,6 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import { Logo } from "@/components/site/logo";
 import { LangSwitch } from "@/components/site/lang-switch";
 import { useI18n } from "@/lib/i18n";
-import { whatsappWith } from "@/lib/site";
 
 const PAGES = [
   { key: "about", to: "/about" },
@@ -85,9 +84,9 @@ export function Header() {
         <div className="ms-auto flex shrink-0 items-center gap-1">
           <LangSwitch />
           <div className="hidden sm:block">
-            <a href={whatsappWith(t.wa.quick)} className="btn btn-wa h-10 min-h-10 px-4 text-sm">
+            <Link to="/" hash="reserver" className="btn btn-wa h-10 min-h-10 px-4 text-sm">
               {t.nav.book}
-            </a>
+            </Link>
           </div>
           <div className="relative lg:hidden" ref={phoneRef}>
             <button
